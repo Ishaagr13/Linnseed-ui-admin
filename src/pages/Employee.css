@@ -1,0 +1,60 @@
+.upper-box{
+    height: 200px;
+    width: 1210px;
+    background-color: #ebe8e8;
+    /* color: #fff; */
+    /* box-shadow: 5px 10px #c9c4c4; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.adjust{
+    padding-top: 80px;
+    padding-left: 30px;
+}
+.button-cont{
+    padding: 9px 23px;
+    background-color: var(--blue);
+    border-radius: 3px;
+    border: none;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #fff;
+    margin-left: 600px;
+}
+.tables{
+    position: absolute;
+    height: 1000px;
+    width: 1100px;
+    background-color: #fff;
+    margin: 1px 10px;
+    top: 270px;
+    box-shadow: rgba(0 , 0 , 0, 0.35) 2px 5px 15px;
+}
+
+.subject .circle{
+    margin: 20px 20px;
+    height:40px;
+    width: 40px;
+    color: #fff;
+    background: var(--blue);
+    padding: 8px 10px;
+    border-radius: 30px;
+}
+.icon {
+    font-size: 18px; /* Adjust the size of your icon as needed */
+}
+
+.buts button{
+    margin-left: 15px;
+    padding: 8px 30px;
+}
+
+.subject h5{
+    margin-left: 15px;
+}
+.tables{
+    padding: 5px 15px;
+}
+.tables .tabl{
+    margin-top: 40px;
+}
