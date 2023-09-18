@@ -1,3 +1,4 @@
-.slidebar-nav {
-  
+li:hover {
+    background-color: #6d6c6c73;
+    border-radius: 30px;
 }

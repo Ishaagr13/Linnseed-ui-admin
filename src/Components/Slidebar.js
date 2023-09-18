@@ -43,7 +43,7 @@ const Slidebar = () => {
         <hr className="sidebar-divider my-0" />
 
         {/*  <!-- Nav Item - Dashboard --> */}
-        <li className="nav-item active">
+        <li className="nav-item active" id="hovering">
           <a className="nav-link" href="/">
             <i class="material-icons">settings_input_svideo</i>
             <span>Dashboard</span>
@@ -66,17 +66,17 @@ const Slidebar = () => {
             className="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapseTwo"
+            data-target="#collapseThree"
             aria-expanded="true"
-            aria-controls="collapseTwo"
+            aria-controls="collapseThree"
           >
             <i class="material-icons">dvr</i>
             <span>Sellers</span>
           </a>
           <div
-            id="collapseTwo"
+            id="collapseThree"
             className="collapse"
-            aria-labelledby="headingTwo"
+            aria-labelledby="headingThree"
             data-parent="#accordionSidebar"
           >
             <div className="bg-white py-2 collapse-inner rounded">
@@ -167,17 +167,17 @@ const Slidebar = () => {
             className="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapseTwo"
+            data-target="#collapsefour"
             aria-expanded="true"
-            aria-controls="collapseTwo"
+            aria-controls="collapsefour"
           >
             <i class="material-icons">library_books</i>
             <span>Buissness Deals</span>
           </a>
           <div
-            id="collapseTwo"
+            id="collapsefour"
             className="collapse"
-            aria-labelledby="headingTwo"
+            aria-labelledby="headingfour"
             data-parent="#accordionSidebar"
           >
             <div className="bg-white py-2 collapse-inner rounded">
@@ -235,17 +235,17 @@ const Slidebar = () => {
             className="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapseTwo"
+            data-target="#collapsefsix"
             aria-expanded="true"
-            aria-controls="collapseTwo"
+            aria-controls="collapsefsix"
           >
             <i class="material-icons">business</i>
             <span>Front</span>
           </a>
           <div
-            id="collapseTwo"
+            id="collapsefsix"
             className="collapse"
-            aria-labelledby="headingTwo"
+            aria-labelledby="headingfsix"
             data-parent="#accordionSidebar"
           >
             <div className="bg-white py-2 collapse-inner rounded">
@@ -264,46 +264,46 @@ const Slidebar = () => {
             className="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapseTwo"
+            data-target="#collapsesix"
             aria-expanded="true"
-            aria-controls="collapseTwo"
+            aria-controls="collapsesix"
           >
             <i class="material-icons">note</i>
             <span>Blog</span>
           </a>
-          <div
-            id="collapseTwo"
+          <seven
+            id="collapsesix"
             className="collapse"
-            aria-labelledby="headingTwo"
+            aria-labelledby="headingsix"
             data-parent="#accordionSidebar"
           >
             <div className="bg-white py-2 collapse-inner rounded">
               {/* <h6 className="collapse-header">Custom Components:</h6> */}
-              <a className="collapse-item" href="/addblog">
+              <a className="collapssixtem" href="/addblog">
                 Add blog
               </a>
               <a className="collapse-item" href="/viewblog">
                 View Blog
               </a>
             </div>
-          </div>
+          </seven>
         </li>
         <li className="nav-item">
           <a
             className="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapseTwo"
+            data-target="#collapseseven"
             aria-expanded="true"
-            aria-controls="collapseTwo"
+            aria-controls="collapseseven"
           >
             <i class="material-icons">videocam</i>
             <span>Video</span>
           </a>
           <div
-            id="collapseTwo"
+            id="collapseseven"
             className="collapse"
-            aria-labelledby="headingTwo"
+            aria-labelledby="headingseven"
             data-parent="#accordionSidebar"
           >
             <div className="bg-white py-2 collapse-inner rounded">
@@ -328,17 +328,17 @@ const Slidebar = () => {
             className="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapseTwo"
+            data-target="#collapseeight"
             aria-expanded="true"
-            aria-controls="collapseTwo"
+            aria-controls="collapseeight"
           >
             <i class="material-icons">notifications</i>
             <span>Offer</span>
           </a>
           <div
-            id="collapseTwo"
+            id="collapseeight"
             className="collapse"
-            aria-labelledby="headingTwo"
+            aria-labelledby="headingeight"
             data-parent="#accordionSidebar"
           >
             <div className="bg-white py-2 collapse-inner rounded">
@@ -362,17 +362,17 @@ const Slidebar = () => {
             className="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapseTwo"
+            data-target="#collapsenine"
             aria-expanded="true"
-            aria-controls="collapseTwo"
+            aria-controls="collapsenine"
           >
             <i class="material-icons">aspect_ratio</i>
             <span>Cotton Bales Spot Price</span>
           </a>
           <div
-            id="collapseTwo"
+            id="collapsenine"
             className="collapse"
-            aria-labelledby="headingTwo"
+            aria-labelledby="headingnine"
             data-parent="#accordionSidebar"
           >
             <div className="bg-white py-2 collapse-inner rounded">

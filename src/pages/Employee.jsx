@@ -5,8 +5,15 @@ import { IoIosArrowForward } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
 import { IoIosArrowBack } from "react-icons/io";
 import Button from "react-bootstrap/Button";
+import { useNavigate } from 'react-router-dom';
 
 const Employee = () => {
+
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1); // This function will take you to the previous page
+  };
   return (
     <div>
       <TopNav />
@@ -29,7 +36,7 @@ const Employee = () => {
       <div className="tables">
         <div className="subject">
           <div className="circle">
-            <IoIosArrowBack className="icon" />
+            <IoIosArrowBack className="icon" onClick={goBack}/>
           </div>
           <h5>Employee Master List</h5>
           <div className="buts">
