@@ -91,7 +91,7 @@ function Dashboard() {
               </Routes>
             </div>
           </div>
-          <Footer/>
+          
         </Router>
 
         {/* Scroll to Top Button */}

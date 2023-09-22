@@ -16,10 +16,7 @@ function App() {
           <Route path="/employee" element={<Employee/>}/>
         </Routes>
        </div>
-
-
      </BrowserRouter>
-     <Footer/>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import TopNav from "./TopNav";
 import Table from "react-bootstrap/Table";
+import Footer from "../pages/Footer";
 
 const Home = () => {
   return (
@@ -287,6 +288,7 @@ const Home = () => {
             </tbody>
           </Table>
         </div>
+        <Footer/>
     </div>
   );
 };
