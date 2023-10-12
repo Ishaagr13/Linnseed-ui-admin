@@ -8,8 +8,16 @@ import { IoIosArrowBack } from "react-icons/io";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
 import { Form, FormGroup, Row, Col, Label, Input } from "reactstrap";
+import Select from 'react-select';
+
+const options = [
+  { value: 'Admin', label: 'Admin' },
+  { value: 'Super Admin', label: 'Super Admin' },
+];
 
 const Createemp = () => {
+  const [selectedOption, setSelectedOption] = useState(null);
+
   const [dropdown1, setDropdown1] = useState("");
   const [dropdown2, setDropdown2] = useState("");
   const navigate = useNavigate();
@@ -53,11 +61,13 @@ const Createemp = () => {
                 <Col md={4}>
                   <FormGroup>
                     <Label for="userTypeSelect">User Type</Label>
-                    <Input type="select" name="userType" id="userTypeSelect">
-                      <option value="admin">Admin</option>
-                      <option value="superadmin">Superadmin</option>
-                    </Input>
+                    <Select
+                      defaultValue={selectedOption}
+                      onChange={setSelectedOption}
+                      options={options}
+                    />
                   </FormGroup>
+
                 </Col>
                 <Col md={4}>
                   <FormGroup>
@@ -163,7 +173,7 @@ const Createemp = () => {
             </div>
             <hr />
             <hr />
-            
+
           </div>
         </div>
       </div>
