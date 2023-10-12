@@ -7,12 +7,15 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { IoIosArrowBack } from "react-icons/io";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
-import { Form, FormGroup, Row, Col, Label, Input } from "reactstrap";
+import { Form, FormGroup, Row, Col, Label, Input , button } from "reactstrap";
+import TableDemo from "./TableDemo";
 
 const Createemp = () => {
   const [dropdown1, setDropdown1] = useState("");
   const [dropdown2, setDropdown2] = useState("");
   const navigate = useNavigate();
+
+  
 
   const goBack = () => {
     navigate(-1); // This function will take you to the previous page
@@ -163,7 +166,29 @@ const Createemp = () => {
             </div>
             <hr />
             <hr />
-            
+            <div className="profile-box">
+              <h5>Profile Photo</h5>
+              <form style={{ marginLeft: "30px" }}>
+                <input type="file" />
+              </form>
+            </div>
+            <hr />
+            <hr />
+            <div className="buye-info">
+              <div className="buye-name">Buyer Information</div>
+              <TableDemo/>
+            </div>
+            <hr />
+            <hr />
+            <div className="buye-info">
+              <div className="buye-name">Seller Information</div>
+            </div>
+            <hr />
+            <hr />
+            <div className="add-butt">
+              <Button color="primary" style={{padding:"1px 15px"}}><i className="material-icons left">send</i>Add{" "}</Button>
+                       
+            </div>
           </div>
         </div>
       </div>

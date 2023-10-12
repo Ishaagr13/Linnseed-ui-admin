@@ -1,8 +1,17 @@
 .create-form{
     padding: 5px 23px;
     border-radius: 2px solid grey;
+    /* background-color: aqua; */
 }
 .login_box{
     margin-top: 35px;
     /* background-color: aqua; */
+}
+.buye-name{
+    background-color: blue;
+    color: white;
+}
+.add-butt button{
+    margin-left: 800px;
+    margin-bottom: 50px;
 }
