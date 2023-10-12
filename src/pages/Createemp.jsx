@@ -119,6 +119,51 @@ const Createemp = () => {
                 </Col>
               </Row>
             </Form>
+            <hr />
+            <hr />
+            <div className="login_box">
+              <h5>Login Credeantials</h5>
+              <Form>
+                <Row>
+                  <Col md={4}>
+                    <FormGroup>
+                      <Label for="exampleEmail">Email</Label>
+                      <Input
+                        id="exampleEmail"
+                        name="email"
+                        placeholder="Enter Email"
+                        type="email"
+                      />
+                    </FormGroup>
+                  </Col>
+                  <Col md={4}>
+                    <FormGroup>
+                      <Label for="examplePassword">Password</Label>
+                      <Input
+                        id="examplePassword"
+                        name="password"
+                        placeholder="password placeholder"
+                        type="password"
+                      />
+                    </FormGroup>
+                  </Col>
+                  <Col md={4}>
+                    <FormGroup>
+                      <Label for="examplePassword">Status</Label>
+                      <Input
+                        id="exampleStatus"
+                        name="status"
+                        placeholder=""
+                        type="dropdown"
+                      />
+                    </FormGroup>
+                  </Col>
+                </Row>
+              </Form>
+            </div>
+            <hr />
+            <hr />
+            
           </div>
         </div>
       </div>
