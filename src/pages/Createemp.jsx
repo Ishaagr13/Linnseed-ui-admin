@@ -24,8 +24,29 @@ const statusOptions = [
   { value: 'Inactive', label: 'Inactive' },
 
 ];
+import Select from 'react-select';
+
+const userTypeOptions = [
+  { value: 'Admin', label: 'Admin' },
+  { value: 'Super Admin', label: 'Super Admin' },
+];
+const genderOptions = [
+  { value: 'Male', label: 'Male' },
+  { value: 'Female', label: 'Female' },
+
+];
+const statusOptions = [
+  { value: 'Active', label: 'Active' },
+  { value: 'Inactive', label: 'Inactive' },
+
+];
 
 const Createemp = () => {
+  const [usertypeOptions, setUsertypeOptions] = useState(null);
+  const [selectedGender, setSelectedGender] = useState(null);
+  const [selectedStatus, setSelectedStatus] = useState(null);
+
+
   const [usertypeOptions, setUsertypeOptions] = useState(null);
   const [selectedGender, setSelectedGender] = useState(null);
   const [selectedStatus, setSelectedStatus] = useState(null);
@@ -81,7 +102,13 @@ const Createemp = () => {
                       onChange={setUsertypeOptions}
                       options={userTypeOptions}
                     />
+                    <Select
+                      defaultValue={usertypeOptions}
+                      onChange={setUsertypeOptions}
+                      options={userTypeOptions}
+                    />
                   </FormGroup>
+
 
                 </Col>
                 <Col md={4}>
@@ -136,6 +163,11 @@ const Createemp = () => {
                       onChange={setSelectedGender}
                       options={genderOptions}
                     />
+                    <Select
+                      defaultValue={selectedGender}
+                      onChange={setSelectedGender}
+                      options={genderOptions}
+                    />
                   </FormGroup>
                 </Col>
               </Row>
@@ -171,6 +203,10 @@ const Createemp = () => {
                   <Col md={4}>
                     <FormGroup>
                       <Label for="examplePassword">Status</Label>
+                      <Select
+                        defaultValue={selectedStatus}
+                        onChange={setSelectedStatus}
+                        options={statusOptions}
                       <Select
                         defaultValue={selectedStatus}
                         onChange={setSelectedStatus}
