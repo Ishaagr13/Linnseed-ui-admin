@@ -39,6 +39,7 @@ import AddMICPrice from './pages/CottonSpotPrice/AddMICPrice';
 import ViewMICPrice from './pages/CottonSpotPrice/ViewMICPrice';
 import AddSpotPrice from './pages/YarnPrice/AddSpotPrice';
 import ViewSpotPrice from './pages/YarnPrice/ViewSpotPrice';
+import Createemp from "./pages/Createemp";
 
 function Dashboard() {
   
@@ -87,6 +88,7 @@ function Dashboard() {
                 <Route path="/viewmicprice" element={<ViewMICPrice/>} />
                 <Route path="/addspotprice" element={<AddSpotPrice/>} />
                 <Route path="/viewspotprice" element={<ViewSpotPrice/>} />
+                <Route path="/employee_add" element={<Createemp/>} />
 
               </Routes>
             </div>

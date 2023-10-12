@@ -5,10 +5,9 @@ import { IoIosArrowForward } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
 import { IoIosArrowBack } from "react-icons/io";
 import Button from "react-bootstrap/Button";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Employee = () => {
-
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -24,19 +23,21 @@ const Employee = () => {
             <a href="">Employee</a>
             <IoIosArrowForward />
             <a href="">Employee Master</a>
-            <button className="button-cont">
-              CREATE EMPLOYEE
-              <i>
-                <AiOutlinePlus />{" "}
-              </i>
-            </button>
+            <a href="/employee_add">
+              <button className="button-cont">
+                CREATE EMPLOYEE
+                <i>
+                  <AiOutlinePlus />{" "}
+                </i>
+              </button>
+            </a>
           </div>
         </div>
       </div>
       <div className="tables">
         <div className="subject">
           <div className="circle">
-            <IoIosArrowBack className="icon" onClick={goBack}/>
+            <IoIosArrowBack className="icon" onClick={goBack} />
           </div>
           <h5>Employee Master List</h5>
           <div className="buts">
