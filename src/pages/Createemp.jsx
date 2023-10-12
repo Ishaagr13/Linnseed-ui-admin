@@ -10,13 +10,26 @@ import { useNavigate } from "react-router-dom";
 import { Form, FormGroup, Row, Col, Label, Input } from "reactstrap";
 import Select from 'react-select';
 
-const options = [
+const userTypeOptions = [
   { value: 'Admin', label: 'Admin' },
   { value: 'Super Admin', label: 'Super Admin' },
 ];
+const genderOptions = [
+  { value: 'Male', label: 'Male' },
+  { value: 'Female', label: 'Female' },
+
+];
+const statusOptions = [
+  { value: 'Active', label: 'Active' },
+  { value: 'Inactive', label: 'Inactive' },
+
+];
 
 const Createemp = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [usertypeOptions, setUsertypeOptions] = useState(null);
+  const [selectedGender, setSelectedGender] = useState(null);
+  const [selectedStatus, setSelectedStatus] = useState(null);
+
 
   const [dropdown1, setDropdown1] = useState("");
   const [dropdown2, setDropdown2] = useState("");
@@ -62,9 +75,9 @@ const Createemp = () => {
                   <FormGroup>
                     <Label for="userTypeSelect">User Type</Label>
                     <Select
-                      defaultValue={selectedOption}
-                      onChange={setSelectedOption}
-                      options={options}
+                      defaultValue={usertypeOptions}
+                      onChange={setUsertypeOptions}
+                      options={userTypeOptions}
                     />
                   </FormGroup>
 
@@ -116,15 +129,11 @@ const Createemp = () => {
                 <Col md={4}>
                   <FormGroup>
                     <Label for="exampleSelect">Gender</Label>
-                    <Input
-                      id="exampleSelect"
-                      name="select"
-                      type="select"
-                      style={{ padding: "" }}
-                    >
-                      <option>Male</option>
-                      <option>Female</option>
-                    </Input>
+                    <Select
+                      defaultValue={selectedGender}
+                      onChange={setSelectedGender}
+                      options={genderOptions}
+                    />
                   </FormGroup>
                 </Col>
               </Row>
@@ -160,11 +169,10 @@ const Createemp = () => {
                   <Col md={4}>
                     <FormGroup>
                       <Label for="examplePassword">Status</Label>
-                      <Input
-                        id="exampleStatus"
-                        name="status"
-                        placeholder=""
-                        type="dropdown"
+                      <Select
+                        defaultValue={selectedStatus}
+                        onChange={setSelectedStatus}
+                        options={statusOptions}
                       />
                     </FormGroup>
                   </Col>
