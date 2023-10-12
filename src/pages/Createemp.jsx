@@ -184,6 +184,30 @@ const Createemp = () => {
             <hr />
             <hr />
 
+            <div className="profile-box">
+              <h5>Profile Photo</h5>
+              <form style={{ marginLeft: "30px" }}>
+                <input type="file" />
+              </form>
+            </div>
+            <hr />
+            <hr />
+            <div className="buye-info">
+              <div className="buye-name">Buyer Information</div>
+              {/* <TableDemo/> */}
+            </div>
+            <hr />
+            <hr />
+            <div className="buye-info">
+              <div className="buye-name">Seller Information</div>
+            </div>
+            <hr />
+            <hr />
+            <div className="add-butt">
+              <Button color="primary" style={{padding:"1px 15px"}}><i className="material-icons left">send</i>Add{" "}</Button>
+                       
+            </div>
+            
           </div>
         </div>
       </div>
