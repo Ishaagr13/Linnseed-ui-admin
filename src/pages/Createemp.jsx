@@ -7,10 +7,30 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { IoIosArrowBack } from "react-icons/io";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
-import { Form, FormGroup, Row, Col, Label, Input , button } from "reactstrap";
-import TableDemo from "./TableDemo";
+import { Form, FormGroup, Row, Col, Label, Input } from "reactstrap";
+import Select from 'react-select';
+
+const userTypeOptions = [
+  { value: 'Admin', label: 'Admin' },
+  { value: 'Super Admin', label: 'Super Admin' },
+];
+const genderOptions = [
+  { value: 'Male', label: 'Male' },
+  { value: 'Female', label: 'Female' },
+
+];
+const statusOptions = [
+  { value: 'Active', label: 'Active' },
+  { value: 'Inactive', label: 'Inactive' },
+
+];
 
 const Createemp = () => {
+  const [usertypeOptions, setUsertypeOptions] = useState(null);
+  const [selectedGender, setSelectedGender] = useState(null);
+  const [selectedStatus, setSelectedStatus] = useState(null);
+
+
   const [dropdown1, setDropdown1] = useState("");
   const [dropdown2, setDropdown2] = useState("");
   const navigate = useNavigate();
@@ -56,11 +76,13 @@ const Createemp = () => {
                 <Col md={4}>
                   <FormGroup>
                     <Label for="userTypeSelect">User Type</Label>
-                    <Input type="select" name="userType" id="userTypeSelect">
-                      <option value="admin">Admin</option>
-                      <option value="superadmin">Superadmin</option>
-                    </Input>
+                    <Select
+                      defaultValue={usertypeOptions}
+                      onChange={setUsertypeOptions}
+                      options={userTypeOptions}
+                    />
                   </FormGroup>
+
                 </Col>
                 <Col md={4}>
                   <FormGroup>
@@ -109,15 +131,11 @@ const Createemp = () => {
                 <Col md={4}>
                   <FormGroup>
                     <Label for="exampleSelect">Gender</Label>
-                    <Input
-                      id="exampleSelect"
-                      name="select"
-                      type="select"
-                      style={{ padding: "" }}
-                    >
-                      <option>Male</option>
-                      <option>Female</option>
-                    </Input>
+                    <Select
+                      defaultValue={selectedGender}
+                      onChange={setSelectedGender}
+                      options={genderOptions}
+                    />
                   </FormGroup>
                 </Col>
               </Row>
@@ -153,11 +171,10 @@ const Createemp = () => {
                   <Col md={4}>
                     <FormGroup>
                       <Label for="examplePassword">Status</Label>
-                      <Input
-                        id="exampleStatus"
-                        name="status"
-                        placeholder=""
-                        type="dropdown"
+                      <Select
+                        defaultValue={selectedStatus}
+                        onChange={setSelectedStatus}
+                        options={statusOptions}
                       />
                     </FormGroup>
                   </Col>
@@ -166,29 +183,7 @@ const Createemp = () => {
             </div>
             <hr />
             <hr />
-            <div className="profile-box">
-              <h5>Profile Photo</h5>
-              <form style={{ marginLeft: "30px" }}>
-                <input type="file" />
-              </form>
-            </div>
-            <hr />
-            <hr />
-            <div className="buye-info">
-              <div className="buye-name">Buyer Information</div>
-              <TableDemo/>
-            </div>
-            <hr />
-            <hr />
-            <div className="buye-info">
-              <div className="buye-name">Seller Information</div>
-            </div>
-            <hr />
-            <hr />
-            <div className="add-butt">
-              <Button color="primary" style={{padding:"1px 15px"}}><i className="material-icons left">send</i>Add{" "}</Button>
-                       
-            </div>
+
           </div>
         </div>
       </div>
