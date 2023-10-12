@@ -118,13 +118,6 @@ const Createemp = () => {
                   </FormGroup>
                 </Col>
               </Row>
-              <FormGroup check>
-                <Input id="exampleCheck" name="check" type="checkbox" />
-                <Label check for="exampleCheck">
-                  Check me out
-                </Label>
-              </FormGroup>
-              <Button>Sign in</Button>
             </Form>
           </div>
         </div>
