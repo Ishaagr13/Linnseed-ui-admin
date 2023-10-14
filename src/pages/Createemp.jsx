@@ -35,6 +35,8 @@ const Createemp = () => {
   const [dropdown2, setDropdown2] = useState("");
   const navigate = useNavigate();
 
+  
+
   const goBack = () => {
     navigate(-1); // This function will take you to the previous page
   };
@@ -79,7 +81,9 @@ const Createemp = () => {
                       onChange={setUsertypeOptions}
                       options={userTypeOptions}
                     />
+                    
                   </FormGroup>
+
 
                 </Col>
                 <Col md={4}>
@@ -182,6 +186,30 @@ const Createemp = () => {
             <hr />
             <hr />
 
+            <div className="profile-box">
+              <h5>Profile Photo</h5>
+              <form style={{ marginLeft: "30px" }}>
+                <input type="file" />
+              </form>
+            </div>
+            <hr />
+            <hr />
+            <div className="buye-info">
+              <div className="buye-name">Buyer Information</div>
+              {/* <TableDemo/> */}
+            </div>
+            <hr />
+            <hr />
+            <div className="buye-info">
+              <div className="buye-name">Seller Information</div>
+            </div>
+            <hr />
+            <hr />
+            <div className="add-butt">
+              <Button color="primary" style={{padding:"1px 15px"}}><i className="material-icons left">send</i>Add{" "}</Button>
+                       
+            </div>
+            
           </div>
         </div>
       </div>
