@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assests/logo-linn.png";
+import logo from "../assets/logo-linn.png"
 import '../Components/Slidebar.css';
 
 const Slidebar = () => {
