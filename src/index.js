@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // const condition = true;
 root.render(
   <React.StrictMode>
-    {/* <Dashboard/> */}
+    {/* <Dashboard/>  */}
     <Form/>
 
     {/* {condition ?  <Dashboard/> :  <Form/>} */}

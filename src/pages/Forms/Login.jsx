@@ -1,7 +1,85 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const Login = () => {
+
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const decodeToken = (token) => {
+    try {
+      const base64Url = token.split(".")[1];
+      const base64 = base64Url.replace("-", "+").replace("_", "/");
+      const decodedToken = JSON.parse(atob(base64));
+      return decodedToken;
+    } catch (error) {
+      console.error("Error decoding JWT token:", error);
+      return null;
+    }
+  };
+
+  const handleUsernameChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Make a POST request to the login API endpoint
+      const response = await axios.post('http://localhost:8891/api/admin/auth', {
+        email,
+        password,
+      });
+
+      // Assuming the API returns a token upon successful login
+      // console.log('response.data:', response.data);
+      // const authToken = response.data.accessToken;
+      const accessToken = token.accessToken;
+      const decodedToken = decodeToken(accessToken);
+
+      localStorage.setItem("access_token", accessToken);
+      console.log('decodedToken', decodedToken)
+
+      // Store the token in your application's state, context, or local storage as needed
+      // localStorage.setItem('authToken', authToken);
+
+
+    } catch (error) {
+      console.error('Login failed. Error:', error);
+    }
+  };
+
+
+
+  // return (
+  //   <div>
+  //     <h1>Login</h1>
+  //     <form onSubmit={handleLogin}>
+  //       <div>
+  //         <label>Username:</label>
+  //         <input type="text" value={email} onChange={handleUsernameChange} />
+  //       </div>
+  //       <div>
+  //         <label>Password:</label>
+  //         <input type="password" value={password} onChange={handlePasswordChange} />
+  //       </div>
+  //       <button type="submit">Log In</button>
+  //     </form>
+  //   </div>
+  // );
+
+
+
+
+
+
   return (
     <>
       <div className="container pt-4 pb-4" style={{ marginTop: '8%' }}>
@@ -21,7 +99,7 @@ const Login = () => {
 
                 <form
                   className="login-form"
-
+                  onSubmit={handleLogin}
                   name="signin"
                   action=""
                   method="post"
@@ -34,7 +112,7 @@ const Login = () => {
                       className="form-control"
                       placeholder="Email"
                       required=""
-
+                      value={email} onChange={handleUsernameChange}
 
                     />
                     <label for="username">Email</label>
@@ -48,7 +126,7 @@ const Login = () => {
                       className="form-control"
                       placeholder="Password"
                       required=""
-
+                      value={password} onChange={handlePasswordChange}
                     />
                     <label for="password">password</label>
                   </div>
@@ -58,7 +136,7 @@ const Login = () => {
                     style={{
                       height: "50px",
                       // backgroundColor: "#AC7E64",
-                      backgroundColor:'rgb(32, 148, 19)',
+                      backgroundColor: 'rgb(32, 148, 19)',
                       // width: "42vw",
                       borderRadius: "2px",
                     }}
