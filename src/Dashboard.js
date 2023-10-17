@@ -40,17 +40,19 @@ import ViewMICPrice from './pages/CottonSpotPrice/ViewMICPrice';
 import AddSpotPrice from './pages/YarnPrice/AddSpotPrice';
 import ViewSpotPrice from './pages/YarnPrice/ViewSpotPrice';
 import Createemp from "./pages/Createemp";
+import Login from "./pages/Forms/Login"
 
 function Dashboard() {
   
   return (
     <div className="component">
       <body id="page-top">
-        <Router>
+        {/* <Router> */}
           <div id="wrapper">
             <Slidebar />
             <div id="content-wrapper" className="d-flex flex-column">
               <Routes>
+              <Route path="/" element={<Login />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/employee" element={<Employee />} />
                 <Route path="/mobileuser" element={<Mobile />} />
@@ -89,12 +91,12 @@ function Dashboard() {
                 <Route path="/addspotprice" element={<AddSpotPrice/>} />
                 <Route path="/viewspotprice" element={<ViewSpotPrice/>} />
                 <Route path="/employee_add" element={<Createemp/>} />
-
+                <Route path="/dash" element={<Dashboard/>} />
               </Routes>
             </div>
           </div>
           
-        </Router>
+        {/* </Router> */}
 
         {/* Scroll to Top Button */}
         <a className="scroll-to-top rounded" href="#page-top">

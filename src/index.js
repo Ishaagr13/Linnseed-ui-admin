@@ -2,15 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 /* import './index.css'; */
 import Dashboard from './Dashboard';
-import Form from './pages/Forms/Form';
+// import Form from './pages/Forms/Form';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// const condition = true;
 root.render(
-  <React.StrictMode>
-    {/* <Dashboard/>  */}
-    <Form/>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 
-    {/* {condition ?  <Dashboard/> :  <Form/>} */}
-  </React.StrictMode>
 );
