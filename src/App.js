@@ -13,16 +13,13 @@ import Seller from './pages/Seller';
 
 function App() {
 
-  const [token, setToken] = useToken();
-  console.log(token);
-
   return (
     <>
-      <Slidebar />
+      {/* <Slidebar /> */}
       {/* <Dashboard /> */}
       <Routes>
-
-        <Route path="/" element={<Dashboard />} />
+      <Route path="/" element={<Login />}/>
+      <Route path="/dash" element={<Dashboard />}/>
         {/* <Route path="/dashboard" element={token ? <Dashboard /> : <Login setToken={setToken} />} />
         <Route path="/employee" element={<Employee />} />
         <Route path="/mobileuser" element={<Mobile />} />

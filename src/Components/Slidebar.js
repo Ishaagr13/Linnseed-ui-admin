@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo-linn.png"
 import '../Components/Slidebar.css';
+import { Link } from "react-router-dom";
 
 const Slidebar = () => {
   const [style, setStyle] = useState(
@@ -22,9 +23,9 @@ const Slidebar = () => {
     <div className="slidebar-nav">
       <ul className={style} id="accordionSidebar">
         {/*  <!-- Sidebar - Brand --> */}
-        <a
+        <Link
           className="sidebar-brand d-flex align-items-center justify-content-center"
-          href="#"
+          to="#"
         >
           <div className="sidebar-brand-icon rotate-n-15">
             <img src={logo} style={{ width: "50px" }} />
@@ -37,23 +38,23 @@ const Slidebar = () => {
               onClick={changeStyle}
             ></button>
           </div>
-        </a>
+        </Link>
 
         {/*   <!-- Divider --> */}
         <hr className="sidebar-divider my-0" />
 
         {/*  <!-- Nav Item - Dashboard --> */}
         <li className="nav-item active" id="hovering">
-          <a className="nav-link" href="/">
+          <Link className="nav-link" to="/">
             <i class="material-icons">settings_input_svideo</i>
             <span>Dashboard</span>
-          </a>
+          </Link>
         </li>
         <li className="nav-item active">
-          <a className="nav-link" href="/employee">
+          <Link className="nav-link" to="/employee">
             <i class="material-icons">group</i>
             <span>Employee</span>
-          </a>
+          </Link>
         </li>
         <li className="nav-item active">
           <a className="nav-link" href="/mobileuser">

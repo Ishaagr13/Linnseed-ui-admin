@@ -42,8 +42,8 @@ import ViewSpotPrice from './pages/YarnPrice/ViewSpotPrice';
 import Createemp from "./pages/Createemp";
 import Login from "./pages/Forms/Login"
 
+
 function Dashboard() {
-  
   return (
     <div className="component">
       <body id="page-top">
@@ -52,7 +52,7 @@ function Dashboard() {
             <Slidebar />
             <div id="content-wrapper" className="d-flex flex-column">
               <Routes>
-              <Route path="/" element={<Login />} />
+              {/* <Route path="/" element={<Login />} /> */}
                 <Route path="/" element={<Home />} />
                 <Route path="/employee" element={<Employee />} />
                 <Route path="/mobileuser" element={<Mobile />} />
@@ -91,7 +91,7 @@ function Dashboard() {
                 <Route path="/addspotprice" element={<AddSpotPrice/>} />
                 <Route path="/viewspotprice" element={<ViewSpotPrice/>} />
                 <Route path="/employee_add" element={<Createemp/>} />
-                <Route path="/dash" element={<Dashboard/>} />
+                {/* <Route path="/dash" element={<Dashboard/>} /> */}
               </Routes>
             </div>
           </div>
