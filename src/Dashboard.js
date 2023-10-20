@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Dashboard.css";
 import Slidebar from "./Components/Slidebar";
-import Home from "./Components/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Employee from "./pages/Employee";
 import Seller from "./pages/Seller";
