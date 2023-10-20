@@ -1,13 +1,12 @@
 import React from "react";
-import TopNav from "../Components/TopNav";
-import "../pages/Employee.css";
+import TopNav from "../../Components/TopNav";
+import "../employee/Employee.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
 import { IoIosArrowBack } from "react-icons/io";
 import Button from "react-bootstrap/Button";
 import { MDBDataTable } from "mdbreact";
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 const Seller = () => {
   const navigate = useNavigate();
@@ -164,7 +163,7 @@ const Seller = () => {
       <div className="tables">
         <div className="subject">
           <div className="circle">
-            <IoIosArrowBack className="icon" onClick={goBack}/>
+            <IoIosArrowBack className="icon" onClick={goBack} />
           </div>
           <h5>Seller List</h5>
           <div className="buts">

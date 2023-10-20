@@ -45,7 +45,7 @@ const Login = ({ setToken }) => {
       const decodedToken = decodeToken(authToken);
       // localStorage.setItem("access_token", accessToken);
       console.log("decodedToken", decodedToken);
-      // localStorage.setItem('authToken', authToken);
+      localStorage.setItem("authToken", authToken);
       setToken(decodedToken);
     } catch (error) {
       console.error("Login failed. Error:", error);

@@ -1,46 +1,8 @@
 import React, { useState } from "react";
 import "./Dashboard.css";
 import Slidebar from "./Components/Slidebar";
-import Home from "./Components/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Employee from "./pages/Employee";
-import Seller from "./pages/Seller";
-import Mobile from "./pages/Mobile";
-import Footer from "./pages/Footer";
-import Buyers from "./pages/Buyers";
-import Profile from './pages/Profile'
-import Feedback from './pages/Enquiry/Feedback';
-import Contact from './pages/Enquiry/Contact';
-import RequestCall from './pages/Enquiry/RequestCall';
-import Enquiry from './pages/Enquiry/Enquiry';
-import MobileAppEnquiry from './pages/Enquiry/MobileAppEnquiry';
-import CallBack from './pages/Enquiry/CallBack';
-import Create from './pages/Deals/Create';
-import Current from './pages/Deals/Current';
-import Target from './pages/Deals/Target';
-import History from './pages/History';
-import Reports from "./pages/Reports";
-import Billing from "./pages/Billing";
-import ClientDetails from './pages/ClientDetails';
-import ManageMasters from './pages/ManageMasters';
-import CompanyDetails from './pages/CompanyDetails';
-import AddFront from './pages/Front/AddFront';
-import Testimonials from './pages/Front/Testimonials';
-import AddVideo from './pages/Video/AddVideo';
-import ViewVideo from './pages/Video/ViewVideo';
-import AddBlog from './pages/Blog/AddBlog';
-import ViewBlog from './pages/Blog/ViewBlog';
-import Statitics from './pages/Statitics';
-import WhoApplyOffer from './pages/Offer/WhoApplyOffer';
-import AddOffer from './pages/Offer/AddOffer';
-import ViewOffer from './pages/Offer/ViewOffer';
-import WhatsappReports from './pages/Offer/WhatsappReports';
-import AddMICPrice from './pages/CottonSpotPrice/AddMICPrice';
-import ViewMICPrice from './pages/CottonSpotPrice/ViewMICPrice';
-import AddSpotPrice from './pages/YarnPrice/AddSpotPrice';
-import ViewSpotPrice from './pages/YarnPrice/ViewSpotPrice';
-import Createemp from "./pages/Createemp";
-import Login from "./pages/Forms/Login"
+
 
 function Dashboard() {
   
@@ -49,7 +11,7 @@ function Dashboard() {
       <body id="page-top">
         {/* <Router> */}
           <div id="wrapper">
-            {/* <Slidebar /> */}
+            <Slidebar />
             <div id="content-wrapper" className="d-flex flex-column">
               <Routes>
                

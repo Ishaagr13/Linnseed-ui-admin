@@ -1,15 +1,16 @@
 /* import logo from './logo.svg'; */
 import './App.css';
 import Dashboard from './Dashboard';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Employee from './pages/Employee';
+import { BrowserRouter , Routes, Route } from "react-router-dom";
+import Employee from './scenes/employee/Employee';
 import Footer from './pages/Footer';
 import Slidebar from './Components/Slidebar';
 import Home from './Components/Home';
 import Login from './pages/Forms/Login';
 import useToken from './global/useToken'
-import Mobile from './pages/Mobile';
-import Seller from './pages/Seller';
+import Mobile from './scenes/mobile/Mobile';
+import Seller from './scenes/sellers/Seller';
+import Createemp from './scenes/employee/Createemp';
 
 function App() {
 
@@ -17,13 +18,16 @@ function App() {
   console.log("Token", token);
 
   return (
-  <Router>
-    <Slidebar />
+  <BrowserRouter>
 
+  <div className='row'>
+  <div className='col-sm-2'>
+
+    {token?<Slidebar/>:null}
+    </div>
+    <div className='col-sm-10'>
     <Routes>
       
-      {/* <Dashboard /> */}
-    
       {/* <Route path="/" element={token ? <Dashboard /> : <Login setToken={setToken} />} /> */}
       <Route path="/dashboard" element={token ? <Dashboard /> : <Login setToken={setToken} />} />
       <Route path="/" element={token ? <Home /> : <Login setToken={setToken} />} />
@@ -32,6 +36,7 @@ function App() {
         <Route path="/mobileuser" element={<Mobile />} />
         <Route path="/seller" element={<Seller />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/employee_add" element={<Createemp/>} />
 
         
               
@@ -69,10 +74,14 @@ function App() {
                 <Route path="/viewmicprice" element={<ViewMICPrice/>} />
                 <Route path="/addspotprice" element={<AddSpotPrice/>} />
                 <Route path="/viewspotprice" element={<ViewSpotPrice/>} />
-                <Route path="/employee_add" element={<Createemp/>} />
+                
                 <Route path="/dash" element={<Dashboard/>} /> */}
+                
       </Routes>
-      </Router>
+      </div>
+      </div>
+      </BrowserRouter>
+      
   );
 }
 
